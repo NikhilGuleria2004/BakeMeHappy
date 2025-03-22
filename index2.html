@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BakeMeHappy | Indian Restaurant</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Interior.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans leading-normal tracking-normal">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div class="flex items-center py-4">
+                        <span class="font-semibold text-gray-800 text-xl">BakeMeHappy</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="#" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold">Home</a>
+                    <a href="#menu" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Menu</a>
+                    <a href="#reservation" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Reservation</a>
+                    <a href="#about" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
+                    <a href="#contact" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-green-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="hidden mobile-menu md:hidden">
+            <ul class="bg-white shadow-lg">
+                <li><a href="#" class="block text-sm px-4 py-3 text-green-500 font-semibold">Home</a></li>
+                <li><a href="#menu" class="block text-sm px-4 py-3 hover:bg-green-500 hover:text-white transition duration-300">Menu</a></li>
+                <li><a href="#reservation" class="block text-sm px-4 py-3 hover:bg-green-500 hover:text-white transition duration-300">Reservation</a></li>
+                <li><a href="#about" class="block text-sm px-4 py-3 hover:bg-green-500 hover:text-white transition duration-300">About</a></li>
+                <li><a href="#contact" class="block text-sm px-4 py-3 hover:bg-green-500 hover:text-white transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-image h-screen flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">BakeMeHappy </h1>
+            <p class="text-xl md:text-2xl text-white mb-8">Authentic Indian Cuisine</p>
+            <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 justify-center">
+                <a href="#menu" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 inline-block">Order Now</a>
+                <a href="#reservation" class="bg-transparent hover:bg-white border-2 border-white text-white hover:text-green-500 font-bold py-3 px-6 rounded-full transition duration-300 inline-block">Book a Table</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+<section id="about" class="py-20 bg-white flex items-center justify-center">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center justify-center text-center md:text-left">
+            
+            <div class="md:w-1/2 md:pl-10">
+                <h2 class="text-3xl font-bold mb-4 text-gray-800">Our Story</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto md:mx-0 mb-6"></div>
+                <p class="text-gray-600 mb-4">Welcome to Bella Cucina, where tradition meets innovation. Our restaurant has been serving authentic Indian cuisine for over 20 years, bringing the flavors of India to your doorstep.</p>
+                <p class="text-gray-600 mb-4">Our chefs, trained in the heart of India, use only the freshest ingredients to create dishes that capture the essence of Indian cooking. From our creamy Butter Chicken to our flavorful Biryani, every dish is crafted with passion and care.</p>
+                <p class="text-gray-600">Whether you're dining in our elegant restaurant or enjoying our dishes in the comfort of your home, we promise an unforgettable culinary experience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800">Our Menu</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto my-4"></div>
+                <p class="text-gray-600">Explore our delicious offerings and order online for delivery</p>
+            </div>
+
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden menu-item transition duration-300">
+                        <img src="Chocolate Truffle Cake.jpg" alt="Pasta" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Chocolate Truffle Cake</h3>
+                            <p class="text-gray-600 mb-4">A rich and moist chocolate cake layered with ganache.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-500 font-bold">₹300</span>
+                                <button class="add-to-cart bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition duration-300" data-id="1" data-name="Spaghetti Carbonara" data-price="14.99">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden menu-item transition duration-300">
+                        <img src="Cheesecake.jpg" alt="Pizza" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Cheesecake</h3>
+                            <p class="text-gray-600 mb-4">A creamy, smooth dessert with a biscuit crust, available in various flavors like classic, blueberry, or caramel.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-500 font-bold">₹240</span>
+                                <button class="add-to-cart bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition duration-300" data-id="2" data-name="Margherita Pizza" data-price="16.99">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden menu-item transition duration-300">
+                        <img src="macarons.jpg" alt="Salad" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Macarons</h3>
+                            <p class="text-gray-600 mb-4">Delicate French almond cookies with a creamy filling, available in different flavors.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-500 font-bold">₹200</span>
+                                <button class="add-to-cart bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition duration-300" data-id="3" data-name="Caprese Salad" data-price="12.99">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden menu-item transition duration-300">
+                        <img src="brownies.jpg" alt="Risotto" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Brownies</h3>
+                            <p class="text-gray-600 mb-4">Dense and fudgy chocolate squares, sometimes topped with nuts or served with ice cream</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-500 font-bold">₹40</span>
+                                <button class="add-to-cart bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition duration-300" data-id="4" data-name="Mushroom Risotto" data-price="15.99">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden menu-item transition duration-300">
+                        <img src="gulabJamun.jpg" alt="Lasagna" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Gulab Jamun</h3>
+                            <p class="text-gray-600 mb-4">Deep-fried milk-based dumplings soaked in sugar syrup, served warm.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-500 font-bold">₹90</span>
+                                <button class="add-to-cart bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition duration-300" data-id="5" data-name="Classic Lasagna" data-price="17.99">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden menu-item transition duration-300">
+                        <img src="RasMalai.jpg" alt="Tiramisu" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Ras Malai</h3>
+                            <p class="text-gray-600 mb-4">Classic Indian dessert with sweet milk</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-green-500 font-bold">₹120</span>
+                                <button class="add-to-cart bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-full transition duration-300" data-id="6" data-name="Tiramisu" data-price="8.99">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg p-8 max-w-lg w-full max-h-screen overflow-y-auto">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-gray-800">Your Cart</h2>
+                <button id="close-cart" class="text-gray-500 hover:text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="cart-items" class="mb-6">
+                <!-- Cart items will be added here -->
+                <div class="text-gray-500 text-center py-6">Your cart is empty</div>
+            </div>
+            <div class="border-t pt-4">
+                <div class="flex justify-between text-lg font-semibold mb-4">
+                    <span>Total:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <form id="checkout-form">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="address" class="block text-gray-700 text-sm font-bold mb-2">Delivery Address</label>
+                        <textarea id="address" name="address" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label for="phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full transition duration-300">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800">Book a Table</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto my-4"></div>
+                <p class="text-gray-600">Make a reservation and enjoy our delicious food in our restaurant</p>
+            </div>
+            
+            <div class="max-w-lg mx-auto">
+                <form id="reservation-form" class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="mb-4">
+                        <label for="res-name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="res-name" name="res-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="res-email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="res-email" name="res-email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="res-phone" class="block text-gray-700 text-sm font-bold mb-2">Phone Number</label>
+                        <input type="tel" id="res-phone" name="res-phone" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="res-date" class="block text-gray-700 text-sm font-bold mb-2">Date</label>
+                        <input type="date" id="res-date" name="res-date" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="res-time" class="block text-gray-700 text-sm font-bold mb-2">Time</label>
+                        <input type="time" id="res-time" name="res-time" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="res-guests" class="block text-gray-700 text-sm font-bold mb-2">Number of Guests</label>
+                        <input type="number" id="res-guests" name="res-guests" min="1" max="10" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                    </div>
+                    <div class="mb-6">
+                        <label for="res-message" class="block text-gray-700 text-sm font-bold mb-2">Special Requests</label>
+                        <textarea id="res-message" name="res-message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                    </div>
+                    <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full transition duration-300">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800">What Our Customers Say</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto my-4"></div>
+            </div>
+            
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="mr-4 flex-shrink-0">
+                                <img src="user.png" alt="Customer" class="rounded-full w-12 h-12">
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Usha</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"The food was absolutely delicious! The best I've ever had, and the service was exceptional. Will definitely be ordering again!"</p>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="mr-4 flex-shrink-0">
+                                <img src="user.png" alt="Customer" class="rounded-full w-12 h-12">
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Yojit Chaudhry</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"I booked a table for my anniversary, and the staff went above and beyond to make it special. The food was amazing, and the atmosphere was perfect!"</p>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg shadow-lg p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="mr-4 flex-shrink-0">
+                                <img src="user.png" alt="Customer" class="rounded-full w-12 h-12">
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Devesh Negi</h4>
+                                <div class="flex text-yellow-400">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 italic">"I order from BakeMeHappy at least once a week. The delivery is always prompt, and the food is still hot when it arrives. Their cake is to die for!"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800">Contact Us</h2>
+                <div class="w-20 h-1 bg-green-500 mx-auto my-4"></div>
+            </div>
+            
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <div class="bg-gray-50 rounded-lg shadow-lg p-8 h-full">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Get in Touch</h3>
+                        <div class="flex items-center mb-6">
+                            <div class="mr-4 bg-green-500 text-white rounded-full p-2">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <p class="text-gray-600">Shop no.2, Patiala Road, National Highway 64, Zirakpur, Punjab 140603</p>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <div class="mr-4 bg-green-500 text-white rounded-full p-2">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <p class="text-gray-600">+91 9877310056</p>
+                        </div>
+                        <div class="flex items-center mb-6">
+                            <div class="mr-4 bg-green-500 text-white rounded-full p-2">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <p class="text-gray-600">info@BakeMeHappy.com</p>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="mr-4 bg-green-500 text-white rounded-full p-2">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="text-gray-600">
+                                <p class="mb-1">Monday - Friday: 8am - 10pm</p>
+                                <p class="mb-1">Saturday: 12pm - 11pm</p>
+                                <p>Sunday: 12pm - 9pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/2 px-4 mb-8">
+                    <div class="bg-gray-50 rounded-lg shadow-lg p-8 h-full">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Send Us a Message</h3>
+                        <form id="contact-form">
+                            <div class="mb-4">
+                                <label for="contact-name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+                                <input type="text" id="contact-name" name="contact-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact-email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                                <input type="email" id="contact-email" name="contact-email" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact-subject" class="block text-gray-700 text-sm font-bold mb-2">Subject</label>
+                                <input type="text" id="contact-subject" name="contact-subject" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" required>
+                            </div>
+                            <div class="mb-6">
+                                <label for="contact-message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                                <textarea id="contact-message" name="contact-message" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full w-full transition duration-300">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <h3 class="text-xl font-semibold mb-4">BakeMeHappy</h3>
+                    <p class="mb-4">Authentic Indian cuisine delivered to your doorstep or enjoyed in our elegant restaurant.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-green-500 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-green-500 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-green-500 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-green-500 transition duration-300">
+                            <i class="fab fa-yelp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul>
+                        <li class="mb-2"><a href="#" class="text-gray-300 hover:text-white transition duration-300">Home</a></li>
+                        <li class="mb-2"><a href="#menu" class="text-gray-300 hover:text-white transition duration-300">Menu</a></li>
+                        <li class="mb-2"><a href="#reservation" class="text-gray-300 hover:text-white transition duration-300">Reservation</a></li>
+                        <li class="mb-2"><a href="#about" class="text-gray-300 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="w-full md:w-1/3 px-4 mb-8">
+                    <h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+                    <p class="mb-4">Subscribe to our newsletter to get updates on special offers and events.</p>
+                    <form id="newsletter-form" class="flex">
+                        <input type="email" placeholder="Your email" class="py-2 px-3 w-full rounded-l-lg focus:outline-none text-gray-700">
+                        <button type="submit" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-r-lg transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 mt-6 text-center">
+                <p>&copy; 2025 BakeMeHappy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+        <div class="bg-white rounded-lg p-8 max-w-md w-full">
+            <div class="text-center">
+                <div class="bg-green-100 rounded-full p-4 inline-block mb-4">
+                    <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-2" id="success-title">Success!</h3>
+                <p class="text-gray-600 mb-6" id="success-message">Your message has been sent successfully.</p>
+                <button id="close-success" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded-full transition duration-300">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+    
+        // Shopping cart functionality
+        let cart = [];
+        const cartModal = document.getElementById('cart-modal');
+        const cartItems = document.getElementById('cart-items');
+        const cartTotal = document.getElementById('cart-total');
+    
+        // Ensure correct menu items are added to the cart
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                const id = this.getAttribute('data-id');
+                const name = this.closest('.menu-item').querySelector('h3').textContent;
+                const priceText = this.closest('.menu-item').querySelector('.text-green-500').textContent.replace('₹', '').trim();
+                const price = parseFloat(priceText);
+    
+                // Check if item is already in cart
+                const existingItem = cart.find(item => item.id === id);
+    
+                if (existingItem) {
+                    existingItem.quantity += 1;
+                } else {
+                    cart.push({
+                        id: id,
+                        name: name,
+                        price: price,
+                        quantity: 1
+                    });
+                }
+    
+                updateCart();
+                showSuccessMessage('Item Added', `${name} has been added to your cart.`);
+            });
+        });
+    
+        // Open cart modal
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+                cartModal.classList.remove('hidden');
+            });
+        });
+    
+        // Close cart modal
+        document.getElementById('close-cart').addEventListener('click', function () {
+            cartModal.classList.add('hidden');
+        });
+    
+        // Update cart display
+        function updateCart() {
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<div class="text-gray-500 text-center py-6">Your cart is empty</div>';
+                cartTotal.textContent = '₹0.00';
+                return;
+            }
+    
+            cartItems.innerHTML = '';
+            let total = 0;
+    
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+    
+                const itemElement = document.createElement('div');
+                itemElement.className = 'flex justify-between items-center p-3 border-b';
+                itemElement.innerHTML = `
+                    <div>
+                        <h4 class="font-semibold">${item.name}</h4>
+                        <div class="text-sm text-gray-500">₹${item.price.toFixed(2)} x ${item.quantity}</div>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="font-semibold mr-3">₹${itemTotal.toFixed(2)}</span>
+                        <button class="remove-item text-red-500" data-id="${item.id}">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                `;
+    
+                cartItems.appendChild(itemElement);
+            });
+    
+            cartTotal.textContent = `₹${total.toFixed(2)}`;
+    
+            // Add event listeners to remove buttons
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function () {
+                    const id = this.getAttribute('data-id');
+                    cart = cart.filter(item => item.id !== id);
+                    updateCart();
+                });
+            });
+        }
+    
+        // Checkout form submission
+        document.getElementById('checkout-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+    
+            if (cart.length === 0) {
+                showSuccessMessage('Error', 'Your cart is empty. Please add items before checking out.');
+                return;
+            }
+    
+            // In a real application, you would send this data to your server
+            const formData = {
+                name: document.getElementById('name').value,
+                address: document.getElementById('address').value,
+                phone: document.getElementById('phone').value,
+                items: cart,
+                total: cart.reduce((total, item) => total + (item.price * item.quantity), 0)
+            };
+    
+            console.log('Order submitted:', formData);
+    
+            // Reset form and cart
+            document.getElementById('checkout-form').reset();
+            cart = [];
+            updateCart();
+            cartModal.classList.add('hidden');
+    
+            showSuccessMessage('Order Placed', 'Your order has been placed successfully! We will deliver it to you shortly.');
+        });
+        
+        // Reservation form submission
+        document.getElementById('reservation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to your server
+            const formData = {
+                name: document.getElementById('res-name').value,
+                email: document.getElementById('res-email').value,
+                phone: document.getElementById('res-phone').value,
+                date: document.getElementById('res-date').value,
+                time: document.getElementById('res-time').value,
+                guests: document.getElementById('res-guests').value,
+                message: document.getElementById('res-message').value
+            };
+            
+            console.log('Reservation submitted:', formData);
+            
+            // Reset form
+            document.getElementById('reservation-form').reset();
+            
+            showSuccessMessage('Reservation Confirmed', 'Your table has been reserved! We look forward to seeing you.');
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to your server
+            const formData = {
+                name: document.getElementById('contact-name').value,
+                email: document.getElementById('contact-email').value,
+                subject: document.getElementById('contact-subject').value,
+                message: document.getElementById('contact-message').value
+            };
+            
+            console.log('Contact form submitted:', formData);
+            
+            // Reset form
+            document.getElementById('contact-form').reset();
+            
+            showSuccessMessage('Message Sent', 'Your message has been sent successfully! We will get back to you soon.');
+        });
+
+        // Newsletter form submission
+        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to your server
+            const email = this.querySelector('input[type="email"]').value;
+            
+            console.log('Newsletter subscription:', email);
+            
+            // Reset form
+            this.reset();
+            
+            showSuccessMessage('Subscribed', 'You have successfully subscribed to our newsletter!');
+        });
+
+        // Success modal functionality
+        const successModal = document.getElementById('success-modal');
+        const successTitle = document.getElementById('success-title');
+        const successMessage = document.getElementById('success-message');
+        
+        function showSuccessMessage(title, message) {
+            successTitle.textContent = title;
+            successMessage.textContent = message;
+            successModal.classList.remove('hidden');
+        }
+        
+        document.getElementById('close-success').addEventListener('click', function() {
+            successModal.classList.add('hidden');
+        });
+    
+        // Close modals when clicking outside
+        window.addEventListener('click', function (e) {
+            if (e.target === cartModal) {
+                cartModal.classList.add('hidden');
+            }
+            if (e.target === successModal) {
+                successModal.classList.add('hidden');
+            }
+        });
+    
+        // Initialize cart
+        updateCart();
+    </script>
+    
+</body>
+</html>
